@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Patrick Hand';
+  font-weight: normal;
+  src: url(./PatrickHand-Regular.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #content {
+  height: 100%;
+  color: white;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#content {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#content::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url(./background-image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.centered {
+  text-align: center;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered p {
+  width: min(450px, 100%);
+}
+
+.heading {
+  font-size: 60px;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+p, .body {
+  font-size: 20px;
+  line-height: 170%;
+}
