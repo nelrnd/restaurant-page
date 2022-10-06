@@ -1,1 +1,3 @@
-console.log('this is working fine');
+import loadPage from './page-load.js';
+
+window.onload = loadPage;
