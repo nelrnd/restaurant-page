@@ -12,42 +12,68 @@
   box-sizing: border-box;
 }
 
-html, body, #content {
-  height: 100%;
-  color: white;
-}
+html {height: 100%;}
 
 body {
+  height: 100%;
+  color: white;
   font-family: 'Open Sans', sans-serif;
-}
 
-#content {
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#content::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
   background: url(./background-image.jpg);
   background-size: cover;
   background-position: center;
+
+  display: grid;
+  grid-template-rows: 150px 1fr;
+}
+
+.navigation-bar {
+  padding: 0.5rem 0 1.5rem;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-bar .logo {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.navigation-bar ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.navigation-bar li {
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#content {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr;
 }
 
 .centered {
   text-align: center;
 
-  height: 100%;
+  height: auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+  top: -2rem;
 }
 
 .centered p {
@@ -61,7 +87,7 @@ body {
   margin-bottom: 2rem;
 }
 
-p, .body {
+p {
   font-size: 20px;
   line-height: 170%;
 }
