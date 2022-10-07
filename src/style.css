@@ -59,6 +59,18 @@ body {
   cursor: pointer;
 }
 
+.navigation-bar li.current::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2.5px;
+  margin: auto;
+  border-radius: 2px;
+  background-color: var(--main);
+  position: relative;
+  top: 4px;
+}
+
 #content {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -66,8 +78,9 @@ body {
 .centered {
   text-align: center;
 
-  height: auto;
+  height: 100%;
   padding: 2rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,6 +150,7 @@ body {
   margin: 4rem auto;
   padding: 2rem;
   background-color: rgba(0,0,0,0.5);
+  border-radius: 20px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;

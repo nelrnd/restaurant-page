@@ -10,18 +10,17 @@ const home = createHome();
 const menu = createMenu();
 const contact = createContact();
 
+const pages = {home, menu, contact};
+
 document.body.insertBefore(navbar, content);
 content.appendChild(home);
 
-document.querySelector('li#home').addEventListener('click', () => {
-  content.innerHTML = '';
-  content.appendChild(home);
-});
-document.querySelector('li#menu').addEventListener('click', () => {
-  content.innerHTML = '';
-  content.appendChild(menu);
-});
-document.querySelector('li#contact').addEventListener('click', () => {
-  content.innerHTML = '';
-  content.appendChild(contact);
+const navLinks = document.querySelectorAll('.navigation-bar li');
+navLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    content.innerHTML = '';
+    content.appendChild(pages[event.target.id]);
+    navLinks.forEach(link => link.classList.remove('current'));
+    event.target.classList.add('current');
+  });
 });

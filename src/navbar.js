@@ -11,6 +11,7 @@ export default function createNavbar() {
 
   const homeLink = document.createElement('li');
   homeLink.id = 'home';
+  homeLink.classList.add('current');
   homeLink.textContent = 'HOME';
   navList.appendChild(homeLink);
 
