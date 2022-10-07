@@ -1,3 +1,7 @@
+:root {
+  --main: #A61A0D;
+}
+
 @font-face {
   font-family: 'Patrick Hand';
   font-weight: normal;
@@ -126,4 +130,49 @@ body {
 }
 .menu-grid .card p {
   color: #D1D1D1;
+}
+
+.contact-section {
+  width: min(1000px, 80vw);
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(0,0,0,0.5);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-section h2 {
+  margin-bottom: 1rem;
+}
+.contact-section ul {
+  list-style: none;
+}
+.contact-section li + li {
+  margin-top: 1rem;
+}
+.contact-section img {
+  vertical-align: bottom;
+  margin-right: 0.5rem;
+}
+
+.contact-section label {
+  display: block;
+  margin-bottom: 6px;
+}
+.contact-section input,
+.contact-section textarea {
+  width: min(300px, 100%);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+.contact-section button {
+  font-size: 18px;
+  color: white;
+  background-color: var(--main);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
