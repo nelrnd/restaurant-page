@@ -8,6 +8,7 @@ export default function createHome() {
   heading.classList.add('heading');
   heading.textContent = 'The best pizzeria in town!';
 
+  copy.classList.add('copy');
   copy.textContent = 'Not convinced? Come and eat at our restaurant to no longer doubt it. We have been cooking pizzas since 1952, passing on our know-how from generation to generation.';
 
   home.appendChild(heading);
